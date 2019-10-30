@@ -1,0 +1,11 @@
+{
+  "AzureKeyVaultSettings": {
+    "UseKeyVault": true,
+    "VaultName": "",
+    "VaultClientId": "",
+    "VaultSecret": "",
+    "VaultKeyCertValSetsClientCertificate": "",
+    "VaultKeyDefraCmCertPwd": "",
+    "VaultKeyDefraCmS2SCount": ""
+  }
+}

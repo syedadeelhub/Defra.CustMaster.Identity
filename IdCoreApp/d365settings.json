@@ -1,0 +1,8 @@
+{
+  "D365Settings": {
+    "D365KeyPrefix": "defra-cm",
+    "D365ApiBaseAddress": "",
+    "D365ApiClientId": "",
+    "D365ApiClientSecret": ""
+  }
+}
