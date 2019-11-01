@@ -13,6 +13,6 @@ namespace Defra.CustMaster.Identity.CoreApp.Model
     {
         [DataMember]
         [JsonProperty("value")]
-        public List<ServiceObject> Value { get; set; }
+        public List<ResponseServiceObject> Value { get; set; }
     }
 }

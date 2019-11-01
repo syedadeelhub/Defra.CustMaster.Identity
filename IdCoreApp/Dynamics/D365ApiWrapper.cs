@@ -99,7 +99,7 @@ namespace Defra.CustMaster.Identity.CoreApp.Dynamics
 
             HttpRequestMessage request = new HttpRequestMessage(
                 method: HttpMethod.Get,
-                requestUri: D365Client.BaseAddress + $"contacts?$select=defra_uniquereference&$filter=defra_b2cobjectid eq '{b2cObjectId}'");
+                requestUri: D365Client.BaseAddress + $"contacts?$select=defra_uniquereference,defra_securityword&$filter=defra_b2cobjectid eq '{b2cObjectId}'");
 
             HttpResponseMessage content = D365Client.SendAsync(request).Result;
 
@@ -125,6 +125,8 @@ namespace Defra.CustMaster.Identity.CoreApp.Dynamics
                 {
                     returnObj.ServiceUserID = contactResponse.Value[0].ServiceUserID;
                     returnObj.UniqueReferenceId = contactResponse.Value[0].UniqueReferenceId;
+                    returnObj.securityWordSet = !string.IsNullOrWhiteSpace(contactResponse.Value[0].defra_securityword) ? true : false;
+                    returnObj.ErrorCode = 200;
                 }
                 else
                 {

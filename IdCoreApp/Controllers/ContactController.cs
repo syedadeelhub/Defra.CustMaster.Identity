@@ -34,6 +34,7 @@ namespace Defra.CustMaster.Identity.CoreApp.Controllers
             try
             {
                 // Client Mutual Authentication
+                // Comment this code from line 38 to 48 for local testing
                 string authenicationResult = AuthenticateCertificate();
 
                 // If there are error for Client Certificate checks return 403

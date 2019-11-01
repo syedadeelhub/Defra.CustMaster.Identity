@@ -14,10 +14,17 @@ namespace Defra.CustMaster.Identity.CoreApp.UnitTests
         [JsonProperty("contactid")]
         public string ServiceUserID;
 
-
         [DataMember]
         [JsonProperty("defra_uniquereference")]
         public string UniqueReferenceId;
+
+        [DataMember]
+        [JsonProperty("defra_securityword")]
+        public string Securityword;
+
+        [DataMember]
+        [JsonProperty("securityWordSet")]
+        public bool securityWordSet;
 
         [DataMember]
         [DefaultValue("200")]

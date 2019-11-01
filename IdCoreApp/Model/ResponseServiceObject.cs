@@ -10,7 +10,7 @@ namespace Defra.CustMaster.Identity.CoreApp.Model
     using Newtonsoft.Json;
 
     [DataContract]
-    public class ServiceObject
+    public class ResponseServiceObject
     {
         [DataMember]
         [JsonProperty("contactid")]
@@ -19,11 +19,7 @@ namespace Defra.CustMaster.Identity.CoreApp.Model
         [DataMember]
         [JsonProperty("defra_uniquereference")]
         public string UniqueReferenceId { get; set; }
-
-        [DataMember]
-        [JsonProperty("securityWordSet")]
-        public bool securityWordSet { get; set; }
-
+        
         [DataMember]
         [DefaultValue("200")]
         [JsonProperty("errorCode")]
@@ -31,6 +27,10 @@ namespace Defra.CustMaster.Identity.CoreApp.Model
 
         [DataMember]
         [JsonProperty("errorMsg")]
-        public string ErrorMsg { get; set; }       
+        public string ErrorMsg { get; set; }
+
+        [DataMember]
+        [JsonProperty("defra_securityword")]
+        public string defra_securityword;
     }
 }
